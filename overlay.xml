@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories version="1.0">
+<repo priority="50" quality="experimental" status="unofficial">
+	<name>diaecho</name>
+	<description>misc packages</description>
+	<homepage>http://github.com/seewpx</homepage>
+	<owner>
+		<email>xuweiping.zero@gmail.com</email>
+		<name>Weiping Xu</name>
+	</owner>
+	<source type="git">git://github.com/seewpx/diaecho.git</source>
+	<feed>https://github.com/seewpx/diaecho/commits/master.atom</feed>
+</repo>
+</repositories>
