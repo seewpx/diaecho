@@ -53,7 +53,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 PATCHES=(
-	"${FILESDIR}"/load_unsafe.patch
+	"${FILESDIR}"/safe_read.patch
 )
 #Setup Environment Variables
 export BUILD_TEST=0
