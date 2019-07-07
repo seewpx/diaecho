@@ -6,16 +6,16 @@ EAPI=7
 PYTHON_COMPAT=( python3_6 )
 #PYTHON_REQ_USE='threads(+)'
 
-inherit distutils-r1 
+inherit distutils-r1 git-r3
 MY_PN=pytorch
 MY_P=${MY_PN}-${PV}
 DESCRIPTION="Deep learning library"
 HOMEPAGE="https://pytorch.org/"
 SRC_URI="https://github.com/pytorch/pytorch/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-#EGIT_REPO_URI="https://github.com/pytorch/pytorch"
-#EGIT_CHECKOUT_DIR=${WORKDIR}/${MY_P}
+EGIT_REPO_URI="https://github.com/pytorch/pytorch"
+EGIT_CHECKOUT_DIR=${WORKDIR}/${MY_P}
 # Use all submodules except for test-* but include test-lib
-#EGIT_SUBMODULES=( '*' '-test-*' test-lib )
+EGIT_SUBMODULES=( '*' '-test-*' test-lib )
 #RESTRICT="network-sandbox"
 LICENSE="BSD"
 SLOT="0"
