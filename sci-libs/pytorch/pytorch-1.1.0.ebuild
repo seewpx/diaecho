@@ -52,6 +52,10 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=(
+	"${FILESDIR}"/load_unsafe.patch
+)
 #Setup Environment Variables
 export BUILD_TEST=0
 export USE_OPENCV=1
