@@ -20,7 +20,7 @@ EGIT_SUBMODULES=( '*' '-test-*' test-lib )
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-#IUSE="mkl cuda +doc +openblas +openmpi +opencv +mkldnn"
+#IUSE="mkl cuda +doc +openblas  +opencv +mkldnn"
 IUSE="cuda +doc "
 CPU_USE_FLAGS_X86="sse sse2 sse3 sse4_1 sse4_2 avx avx2 fma3 fma4"
 for i in $CPU_USE_FLAGS_X86; do
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	dev-util/cmake
 	dev-python/cffi[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
-	sys-cluster/openmpi
+	virtual/mpi
 	>=media-libs/opencv-3.4.1-r5[lapack,opencl,ffmpeg,threads]
 "
 
