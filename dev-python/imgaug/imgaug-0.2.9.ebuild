@@ -16,7 +16,7 @@ SRC_URI="https://github.com/aleju/imgaug/archive/0.2.9.tar.gz -> ${P}.tar.gz"
 #EGIT_CHECKOUT_DIR=${WORKDIR}/${MY_P}
 # Use all submodules except for test-* but include test-lib
 #EGIT_SUBMODULES=( '*' '-test-*' test-lib )
-LICENSE="BSD"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 #IUSE="mkl cuda +doc +openblas +openmpi +opencv +mkldnn"
