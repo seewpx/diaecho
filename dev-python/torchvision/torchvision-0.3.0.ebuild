@@ -41,3 +41,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
    distutils-r1_python_prepare_all
 }
+
+src_compile() {
+	addpredict /dev/nvidiactl
+}
