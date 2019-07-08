@@ -7,7 +7,7 @@ PYTHON_COMPAT=( python3_6 )
 #PYTHON_REQ_USE='threads(+)'
 
 inherit distutils-r1
-MY_PN=imgaug
+MY_PN=keras
 MY_P=${MY_PN}-${PV}
 DESCRIPTION="Keras is a high-level neural networks API"
 HOMEPAGE="https://github.com/keras-team/keras"
