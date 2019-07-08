@@ -6,7 +6,7 @@ EAPI=7
 PYTHON_COMPAT=( python3_6 )
 #PYTHON_REQ_USE='threads(+)'
 inherit distutils-r1
-MY_PN=torchvision
+MY_PN=vision
 MY_P=${MY_PN}-${PV}
 DESCRIPTION="The package consists of popular datasets, model architectures, and common image transformations."
 HOMEPAGE="https://pytorch.org/"
