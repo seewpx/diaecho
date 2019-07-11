@@ -58,7 +58,7 @@ python_install() {
 python_install_all() {
 	distutils-r1_python_install_all
 	doicon spyder/images/spyder.svg
-	make_desktop_entry spyder Spyder spyder "Development;IDE"
+	make_desktop_entry spyder3 Spyder spyder "Development;IDE"
 }
 
 pkg_postinst() {
