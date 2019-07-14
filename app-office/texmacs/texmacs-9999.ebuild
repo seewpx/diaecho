@@ -15,7 +15,7 @@ HOMEPAGE="http://www.texmacs.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="jpeg netpbm sqlite svg spell"
+IUSE="debug jpeg netpbm sqlite svg spell"
 KEYWORDS="~amd64 "
 # RESTRICT="fetch"
 RDEPEND="
