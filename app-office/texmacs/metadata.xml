@@ -1,0 +1,10 @@
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+<use>
+<flag name="netpbm">
+Add support for
+<pkg>media-libs/netpbm</pkg>
+</flag>
+</use>
+</pkgmetadata>
