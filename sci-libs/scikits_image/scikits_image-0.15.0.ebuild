@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc freeimage pyamg test"
 
 RDEPEND="
-	dev-python/matplotlib 
+	dev-python/matplotlib[${PYTHON_USEDEP}] 
 	dev-python/networkx 
 	dev-python/numpy 
 	dev-python/pillow 
