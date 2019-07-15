@@ -21,18 +21,18 @@ IUSE="doc freeimage pyamg test"
 
 RDEPEND="
 	dev-python/matplotlib[${PYTHON_USEDEP}] 
-	dev-python/networkx 
-	dev-python/numpy 
-	dev-python/pillow 
+	dev-python/networkx[${PYTHON_USEDEP}] 
+	dev-python/numpy[${PYTHON_USEDEP}] 
+	dev-python/pillow[${PYTHON_USEDEP}] 
 	dev-python/pywavelets 
-	dev-python/six 
+	dev-python/six[${PYTHON_USEDEP}] 
 	sci-libs/scipy[sparse,${PYTHON_USEDEP}]
 	freeimage? ( media-libs/freeimage )
 	pyamg? ( dev-python/pyamg  )"
 DEPEND="${RDEPEND}
 	>=dev-python/cython-0.23 
-	dev-python/setuptools 
-	test? (	dev-python/nose  )"
+	dev-python/setuptools[${PYTHON_USEDEP}] 
+	test? (	dev-python/nose[${PYTHON_USEDEP}]  )"
 
 S="${WORKDIR}/${MYP}"
 
