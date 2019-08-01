@@ -52,9 +52,9 @@ DEPEND="${RDEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
-PATCHES=(
-	"${FILESDIR}"/safe_read.patch
-)
+#PATCHES=(
+#	"${FILESDIR}"/safe_read.patch
+#)
 #Setup Environment Variables
 export BUILD_TEST=0
 export USE_OPENCV=1
