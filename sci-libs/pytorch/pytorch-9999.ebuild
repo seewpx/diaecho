@@ -64,6 +64,7 @@ export BLAS=Eigen
 export FULL_CAFFE2=1
 export USE_LMDB=1
 export USE_MKLDNN=0
+export TORCH_CUDA_ARCH_LIST=6.1
 #export CFLAGS="-U_FORTIFY_SOURCE "
 #python_compile_all() {
 #	use doc && emake -C docs html
