@@ -191,27 +191,27 @@ src_configure() {
 	#CUDA Kernel Selection
 	local CUDA_ARCH=""
 	if use cuda; then
-		if use sm_30; then
-			if [[ -n "${CUDA_ARCH}" ]] ; then
-				CUDA_ARCH="${CUDA_ARCH};sm_30"
-			else
-				CUDA_ARCH="sm_30"
-			fi
-		fi
-		if use sm_35; then
-			if [[ -n "${CUDA_ARCH}" ]] ; then
-				CUDA_ARCH="${CUDA_ARCH};sm_35"
-			else
-				CUDA_ARCH="sm_35"
-			fi
-		fi
-		if use sm_50; then
-			if [[ -n "${CUDA_ARCH}" ]] ; then
-				CUDA_ARCH="${CUDA_ARCH};sm_50"
-			else
-				CUDA_ARCH="sm_50"
-			fi
-		fi
+		# if use sm_30; then
+		# 	if [[ -n "${CUDA_ARCH}" ]] ; then
+		# 		CUDA_ARCH="${CUDA_ARCH};sm_30"
+		# 	else
+		# 		CUDA_ARCH="sm_30"
+		# 	fi
+		# fi
+		# if use sm_35; then
+		# 	if [[ -n "${CUDA_ARCH}" ]] ; then
+		# 		CUDA_ARCH="${CUDA_ARCH};sm_35"
+		# 	else
+		# 		CUDA_ARCH="sm_35"
+		# 	fi
+		# fi
+		# if use sm_50; then
+		# 	if [[ -n "${CUDA_ARCH}" ]] ; then
+		# 		CUDA_ARCH="${CUDA_ARCH};sm_50"
+		# 	else
+		# 		CUDA_ARCH="sm_50"
+		# 	fi
+		# fi
 		if use sm_52; then
 			if [[ -n "${CUDA_ARCH}" ]] ; then
 				CUDA_ARCH="${CUDA_ARCH};sm_52"
