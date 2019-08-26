@@ -11,7 +11,7 @@ HOMEPAGE="http://www.blender.org/"
 
 EGIT_REPO_URI="http://git.blender.org/blender.git"
 EGIT_BRANCH="master"
-
+EGIT_CLONE_TYPE="shallow"
 LICENSE="|| ( GPL-2 BL )"
 SLOT="28"
 KEYWORDS=""
