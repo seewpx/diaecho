@@ -212,13 +212,13 @@ src_configure() {
 		# 		CUDA_ARCH="sm_50"
 		# 	fi
 		# fi
-		if use sm_52; then
-			if [[ -n "${CUDA_ARCH}" ]] ; then
-				CUDA_ARCH="${CUDA_ARCH};sm_52"
-			else
-				CUDA_ARCH="sm_52"
-			fi
-		fi
+		# if use sm_52; then
+		# 	if [[ -n "${CUDA_ARCH}" ]] ; then
+		# 		CUDA_ARCH="${CUDA_ARCH};sm_52"
+		# 	else
+		# 		CUDA_ARCH="sm_52"
+		# 	fi
+		# fi
 		if use sm_61; then
 			if [[ -n "${CUDA_ARCH}" ]] ; then
 				CUDA_ARCH="${CUDA_ARCH};sm_61"
