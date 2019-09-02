@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 #S="${WORKDIR}/${MY_P}"
 S="${WORKDIR}/${P}"
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.99.2-desktop.patch
+#	"${FILESDIR}"/${PN}-1.99.2-desktop.patch
 
 	# remove new/delete declarations, bug 590002
 	"${FILESDIR}"/${PN}-1.99-remove-new-declaration.patch
