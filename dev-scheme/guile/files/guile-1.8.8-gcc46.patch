@@ -1,22 +1,10 @@
-From 62bc1072c19e81bb0f9e42a5034e7ab8c27d3b94 Mon Sep 17 00:00:00 2001
-From: Ludovic Courtès <ludo@gnu.org>
-Date: Sun, 01 Jul 2012 15:32:03 +0000
-Subject: Fix stack growth direction check.
+Backported upstream patch to fix SIGSEGV with gcc-4.6
 
-Backport of 236f901b0e2b18093421e2e440cf80d00fb98757 from `stable-2.0'.
-Fixes <http://bugs.gnu.org/11845>.
-Reported by Cyprien Nicolas <c.nicolas@gmail.com>.
-
-* configure.in: Pull stack growth direction check from upstream
-  Autoconf.  See
-  http://lists.gnu.org/archive/html/bug-autoconf/2011-06/msg00035.html
-  for a discussion.
----
-diff --git a/configure.in b/configure.in
-index f058841..682e31f 100644
+http://git.savannah.gnu.org/cgit/guile.git/commit/?h=branch_release-1-8&id=62bc1072c19e81bb0f9e42a5034e7ab8c27d3b94
+https://bugs.gentoo.org/show_bug.cgi?id=424475
 --- a/configure.in
 +++ b/configure.in
-@@ -1244,23 +1244,20 @@ SCM_I_GSC_STACK_GROWS_UP=0
+@@ -1199,23 +1199,20 @@
  AC_RUN_IFELSE([AC_LANG_SOURCE(
  [AC_INCLUDES_DEFAULT
  int
@@ -49,5 +37,3 @@ index f058841..682e31f 100644
  }])],
  	       [SCM_I_GSC_STACK_GROWS_UP=1],
  	       [],
---
-cgit v0.9.0.2
