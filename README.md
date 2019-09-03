@@ -9,12 +9,12 @@ A gentoo overlay with misc packages
 Add and install using *layman*.
 
 ```bash
-layman -f -a qownnotes-overlay -o https://raw.githubusercontent.com/seewpx/diaecho/master/overlay.xml
+layman -f -a diaecho-overlay -o https://raw.githubusercontent.com/seewpx/diaecho/master/overlay.xml
 ```
 
 ### direct
 
-To create a configuration file for the QOwnNotes overlay you have to run these commands as root.
+To create a configuration file for the diaecho overlay you have to run these commands as root.
 
 ```bash
 mkdir -p /etc/portage/repos.conf
@@ -24,7 +24,7 @@ nano /etc/portage/repos.conf/diaecho-overlay.conf
 Add these lines to the file:
 
 ```
-[qownnotes-overlay]
+[diaecho-overlay]
 location = /usr/local/portage/diaecho-overlay
 sync-type = git
 sync-uri = https://github.com/seewpx/diaecho.git
