@@ -44,7 +44,7 @@ PATCHES=(
 #	"${FILESDIR}"/${PN}-1.99.2-desktop.patch
 
 	# remove new/delete declarations, bug 590002
-	"${FILESDIR}"/${PN}-1.99-remove-new-declaration.patch
+	#"${FILESDIR}"/${PN}-1.99-remove-new-declaration.patch
 
 	"${FILESDIR}"/${PN}-1.99.6-math_util.patch
 
