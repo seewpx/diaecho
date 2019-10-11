@@ -4,7 +4,7 @@
 EAPI=6
 
 inherit cmake-utils xdg-utils gnome2-utils qmake-utils git-r3
-EGIT_REPO_URI="https://github.com/texmacs/texmacs.git"
+EGIT_REPO_URI="https://github.com/seewpx/texmacs.git"
 EGIT_CHECKOUT_DIR="${WORKDIR}/${P}"
 #MY_P=texmacs-master
 
@@ -57,13 +57,16 @@ src_prepare() {
 	cmake-utils_src_prepare
 
 	# remove tests that require internet access to comply with Gentoo policy
-	sed -i 's/CMAKE\_BUILD\_TYPE\ Debug/CMAKE\_BUILD\_TYPE\ Release/g' CMakeLists.txt || die
-}
+	#sed -i -e 's/enable\_testing/\#enable\_testing/g' CMakeLists.txt || die
+	#sed -i -e 's/add_subdirectory (tests)/\#add_subdirectory (tests)/g' CMakeLists.txt || die
+	#sed -i -e 's/add_subdirectory (benchmark)/#add_subdirectory (benchmark)/g' CMakeLists.txt || die
+	}
 
+CMAKE_BUILD_TYPE=Release
 src_configure() {
-	local CMAKE_BUILD_TYPE
-	CMAKE_BUILD_TYPE=Release
 	local mycmakeargs=(
+		#-DCMAKE_BUILD_TYPE=Release
+		-DBENCHMARK_ENABLE_TESTING=OFF
 		-DUSE_SQLITE3=$(usex sqlite 1 0)
 		-DDEBUG_ASSERT=$(usex debug 1 0)
 	)
