@@ -52,9 +52,10 @@ PATCHES=(
 	#	"${FILESDIR}"/${PN}-1.99.6-guile-size_t.patch
 	#"${FILESDIR}"/${PN}-1.99.9-guile-remove-deprecated.patch
 )
-CMAKE_BUILD_TYPE ?= Release
+#CMAKE_BUILD_TYPE ?= Release
 
 src_configure() {
+	CMAKE_BUILD_TYPE="Release"
 	local mycmakeargs=(
 		-DUSE_SQLITE3=$(usex sqlite 1 0)
 		#-DDEBUG_ASSERT=$(usex debug 1 0)
