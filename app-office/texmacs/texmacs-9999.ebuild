@@ -53,6 +53,13 @@ PATCHES=(
 	#"${FILESDIR}"/${PN}-1.99.9-guile-remove-deprecated.patch
 )
 
+src_prepare() {
+	cmake-utils_src_prepare
+
+	# remove tests that require internet access to comply with Gentoo policy
+	sed -i 's/CMAKE\_BUILD\_TYPE\ Debug/CMAKE\_BUILD\_TYPE\ Release/g' CMakeLists.txt || die
+}
+
 src_configure() {
 	local CMAKE_BUILD_TYPE
 	CMAKE_BUILD_TYPE=Release
