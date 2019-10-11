@@ -58,7 +58,7 @@ src_configure() {
 	CMAKE_BUILD_TYPE="Release"
 	local mycmakeargs=(
 		-DUSE_SQLITE3=$(usex sqlite 1 0)
-		#-DDEBUG_ASSERT=$(usex debug 1 0)
+		-DDEBUG_ASSERT=$(usex debug 1 0)
 	)
 	cmake-utils_src_configure
 }
