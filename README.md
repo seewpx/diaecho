@@ -9,7 +9,7 @@ A gentoo overlay with misc packages
 Add and install using *layman*.
 
 ```bash
-layman -f -a diaecho-overlay -o https://raw.githubusercontent.com/seewpx/diaecho/master/overlay.xml
+layman -f -a diaecho -o https://raw.githubusercontent.com/seewpx/diaecho/master/overlay.xml
 ```
 
 ### direct
@@ -18,14 +18,14 @@ To create a configuration file for the diaecho overlay you have to run these com
 
 ```bash
 mkdir -p /etc/portage/repos.conf
-nano /etc/portage/repos.conf/diaecho-overlay.conf
+nano /etc/portage/repos.conf/diaecho.conf
 ```
 
 Add these lines to the file:
 
 ```
-[diaecho-overlay]
-location = /usr/local/portage/diaecho-overlay
+[diaecho]
+location = /usr/local/portage/diaecho
 sync-type = git
 sync-uri = https://github.com/seewpx/diaecho.git
 ```
