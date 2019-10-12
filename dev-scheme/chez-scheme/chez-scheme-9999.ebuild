@@ -10,7 +10,7 @@ DESCRIPTION="Chez Scheme is an implementation of the Revised 6 Report on Scheme 
 HOMEPAGE="https://cisco.github.io/ChezScheme"
 
 EGIT_REPO_URI="https://github.com/cisco/ChezScheme.git"
-
+EGIT_CLONE_TYPE="shallow"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
