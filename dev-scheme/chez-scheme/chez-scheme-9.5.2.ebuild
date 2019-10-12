@@ -26,11 +26,11 @@ S="${WORKDIR}/ChezScheme-${PV}"
 
 src_prepare() {
     if [ -d '.git' ] && command -v git >/dev/null 2>&1 ; then
-        git submodule init && git submodule update || exit 1
+        git submodule init && git submodule update || die
     else
         if [ ! -f 'nanopass/nanopass.ss' ] ; then
             rmdir nanopass > /dev/null 2>&1
-            (curl  -L -o v1.9.tar.gz https://github.com/nanopass/nanopass-framework-scheme/archive/v1.9.tar.gz && tar -zxf v1.9.tar.gz && mv nanopass-framework-scheme-1.9 nanopass && rm v1.9.tar.gz) || exit 1
+            (curl  -L -o v1.9.tar.gz https://github.com/nanopass/nanopass-framework-scheme/archive/v1.9.tar.gz && tar -zxf v1.9.tar.gz && mv nanopass-framework-scheme-1.9 nanopass && rm v1.9.tar.gz) || die
         fi
 
         if [ "${zlibDep}" != "" ] ; then
