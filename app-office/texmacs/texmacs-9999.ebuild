@@ -57,9 +57,9 @@ src_prepare() {
 	cmake-utils_src_prepare
 
 	# remove tests that require internet access to comply with Gentoo policy
-	#sed -i -e 's/enable\_testing/\#enable\_testing/g' CMakeLists.txt || die
-	#sed -i -e 's/add_subdirectory (tests)/\#add_subdirectory (tests)/g' CMakeLists.txt || die
-	#sed -i -e 's/add_subdirectory (benchmark)/#add_subdirectory (benchmark)/g' CMakeLists.txt || die
+	sed -i -e 's/enable\_testing/\#enable\_testing/g' CMakeLists.txt || die
+	sed -i -e 's/add_subdirectory (tests)/\#add_subdirectory (tests)/g' CMakeLists.txt || die
+	sed -i -e 's/add_subdirectory (benchmark)/#add_subdirectory (benchmark)/g' CMakeLists.txt || die
 	}
 
 CMAKE_BUILD_TYPE=Release
