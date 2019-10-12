@@ -41,8 +41,9 @@ src_prepare() {
 }
 
 src_configure() {
-
+    true
 }
+
 
 src_install() {
 	emake install
