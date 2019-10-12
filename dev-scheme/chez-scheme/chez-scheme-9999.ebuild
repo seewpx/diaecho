@@ -19,6 +19,8 @@ IUSE="+threads"
 DEPEND="
 	sys-libs/ncurses
 	x11-libs/libX11
+    >=app-arch/lz4-1.9.2
+    >=sys-libs/zlib-1.2.11
 "
 
 RDEPEND="${DEPEND}"
@@ -36,7 +38,9 @@ src_configure() {
 	--installbin=/usr/bin \
 	--installlib=/usr/lib \
 	--installman=/usr/share/man \
-	--temproot=${D}
+	--temproot=${D} \
+    LZ4=/usr/lib64/liblz4.so.1 \
+    ZLIB=/usr/lib64/liblz4.so.1
 }
 
 src_install() {
