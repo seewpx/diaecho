@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/ChezScheme-${PV}"
 
 src_prepare() {
+    eapply_user
+    
     if [ -d '.git' ] && command -v git >/dev/null 2>&1 ; then
         git submodule init && git submodule update || die
     else
