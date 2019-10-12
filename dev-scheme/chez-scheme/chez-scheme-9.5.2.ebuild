@@ -10,7 +10,7 @@ DESCRIPTION="Chez Scheme is an implementation of the Revised 6 Report on Scheme 
 HOMEPAGE="https://cisco.github.io/ChezScheme"
 
 SRC_URI="https://github.com/cisco/ChezScheme/archive/v${PV}.tar.gz -> ${PF}.tar.gz"
-RESTRICT = "network-sandbox"
+FEATURES="-network-sandbox"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
