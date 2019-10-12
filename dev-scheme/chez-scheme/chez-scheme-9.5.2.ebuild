@@ -23,6 +23,8 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
+S="${WORKDIR}/ChezScheme-${PV}"
+
 src_configure() {
     local para_thread
 
