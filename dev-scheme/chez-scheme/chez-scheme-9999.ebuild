@@ -1,20 +1,21 @@
-# Copyright 1999-2019 Gentoo Authors
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
 EAPI=5
 
-inherit eutils 
+inherit eutils git-r3
 
 DESCRIPTION="Chez Scheme is an implementation of the Revised 6 Report on Scheme (R6RS) with numerous language and programming environment extensions."
 HOMEPAGE="https://cisco.github.io/ChezScheme"
 
-SRC_URI="https://github.com/cisco/ChezScheme/archive/v${PV}.tar.gz -> ${PF}.tar.gz"
+EGIT_REPO_URI="https://github.com/cisco/ChezScheme.git"
+
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
 IUSE="+threads"
-RESTRICT=network-sandbox
+
 DEPEND="
 	sys-libs/ncurses
 	x11-libs/libX11
@@ -22,12 +23,8 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/ChezScheme-${PV}"
-
-
-
 src_configure() {
-    local para_thread
+        local para_thread
 
 	if use threads ; then
 	   para_thread="--threads"
