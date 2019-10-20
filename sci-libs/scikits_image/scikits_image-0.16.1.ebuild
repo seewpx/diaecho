@@ -3,7 +3,7 @@
 
 EAPI=6
 
-PYTHON_COMPAT=( python3_{5,6,7} )
+PYTHON_COMPAT=( python3_{6,7} )
 
 inherit distutils-r1 eutils virtualx
 
@@ -12,7 +12,7 @@ MYP="${MYPN}-${PV}"
 
 DESCRIPTION="Image processing routines for SciPy"
 HOMEPAGE="https://scikit-image.org/"
-SRC_URI="mirror://pypi/${PN:0:1}/${MYPN}/${MYP}.tar.gz"
+SRC_URI="https://github.com/scikit-image/scikit-image/archive/v${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
