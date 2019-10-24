@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=6
-inherit rpm
+inherit rpm xdg-utils gnome2-utils
 DESCRIPTION="qq linux version "
 HOMEPAGE="https://im.qq.com/linuxqq/download.html"
 SRC_URI="https://qd.myapp.com/myapp/qqteam/linuxQQ/linux${PN}_${PV}-b1-1024_x86_64.rpm"
@@ -14,4 +14,10 @@ IUSE=""
 S=${WORKDIR}
 src_unpack () {
     rpm_src_unpack ${A}
+}
+
+
+src_install () {
+    cp -r ${S}/* ${D}/
+    
 }
