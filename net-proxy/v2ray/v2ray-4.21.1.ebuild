@@ -6,15 +6,15 @@ EAPI=6
 MY_PV="v${PV}"
 inherit systemd
 
-DESCRIPTION="A platform for building proxies to bypass network restrictions."
+DESCRIPTION="A platfoqrm for building proxies to bypass network restrictions."
 HOMEPAGE="https://www.v2ray.com/"
 SRC_URI="
-	https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-64.zip 
+	https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-64.zip -> v2ray-${MY_PV}.zip
 "
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 "
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
@@ -24,7 +24,7 @@ src_unpack() {
 	if [ "${A}" != "" ]; then
 		unpack ${A}
 	fi
-	mv * ${PN}-${PV}
+	#mv * ${PN}-${PV}
 }
 
 src_install() {
@@ -41,6 +41,7 @@ src_install() {
 	dodoc ${S}/doc/readme.md
 
 	#newinitd "${FILESDIR}/v2ray.initd" v2ray
+	sed  -i 's/bin\/v2ray\/v2ray/bin\/v2ray/g' systemd/v2ray.service
 	systemd_dounit systemd/v2ray.service
 
 	popd

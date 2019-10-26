@@ -6,7 +6,7 @@ EAPI=6
 MY_PV="v${PV}"
 inherit systemd
 
-DESCRIPTION="A platform for building proxies to bypass network restrictions."
+DESCRIPTION="A platfoqrm for building proxies to bypass network restrictions."
 HOMEPAGE="https://www.v2ray.com/"
 SRC_URI="
 	https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-64.zip -> v2ray-${MY_PV}.zip
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 "
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
