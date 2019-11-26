@@ -13,7 +13,7 @@ DESCRIPTION="Deep learning library"
 HOMEPAGE="https://pytorch.org/"
 #SRC_URI="https://github.com/pytorch/pytorch/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 EGIT_REPO_URI="https://github.com/pytorch/pytorch"
-EGIT_CLONE_MODE=shallow
+EGIT_CLONE_TYPE=shallow
 EGIT_CHECKOUT_DIR=${WORKDIR}/${MY_P}
 # Use all submodules except for test-* but include test-lib
 EGIT_SUBMODULES=( '*' '-test-*' test-lib )
