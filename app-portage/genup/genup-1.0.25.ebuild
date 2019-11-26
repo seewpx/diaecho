@@ -29,11 +29,10 @@ RDEPEND="${DEPEND}
 # ebuild function overrides
 src_prepare() {
 	# if the buildkernel use flag not set, set script variable accordingly
-	if ! use buildkernel; then
-		elog "buildkernel USE flag not selected - patching script accordingly."
-		sed -i -e 's@USE_BUILDKERNEL=true@USE_BUILDKERNEL=false@g' "${S}/${PN}" || \
-			die "Failed to patch script to reflect omitted buildkernel USE flag."
-	elif use arm || use ppc; then
+	elog "buildkernel USE flag not selected - patching script accordingly."
+	sed -i -e 's@USE_BUILDKERNEL=true@USE_BUILDKERNEL=false@g' "${S}/${PN}" || \
+		die "Failed to patch script to reflect omitted buildkernel USE flag."
+	if use arm || use ppc; then
 		ewarn "buildkernel USE flag not supported on this architecture"
 		ewarn "please consider re-emerging with it turned off;"
 		ewarn "you may still use genup, but must manually specify the"
