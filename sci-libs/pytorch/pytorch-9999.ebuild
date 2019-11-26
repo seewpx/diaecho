@@ -34,7 +34,7 @@ RDEPEND="
 	)
 	virtual/blas
 	dev-cpp/gflags
-	dev-python/python-gflags"
+	dev-python/python-gflags[${PYTHON_USEDEP}]"
 #	dev-python/numpy[${PYTHON_USEDEP}]"
 #sci-libs/openblas::science
 DEPEND="${RDEPEND}
