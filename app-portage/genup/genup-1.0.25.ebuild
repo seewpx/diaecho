@@ -8,8 +8,8 @@ inherit eutils git-r3
 
 DESCRIPTION="Update Portage tree, all installed packages, and kernel"
 
-HOMEPAGE="https://github.com/seewpx/genup"
-EGIT_REPO_URI="https://github.com/seewpx/genup"
+HOMEPAGE="https://github.com/sakaki-/genup"
+EGIT_REPO_URI="https://github.com/sakaki-/genup"
 
 LICENSE="GPL-3+"
 SLOT="0"
