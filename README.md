@@ -1,5 +1,5 @@
 # diaecho
-A gentoo overlay with misc packages
+A gentoo overlay with misc packages. This overlay is most of my own convenience. But if any question or issue about the packages in this overlay, you're welcome to contact me.
 
 
 ## Usage
