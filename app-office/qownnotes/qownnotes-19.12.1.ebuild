@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-
+RESTRICT="mirror"
 DEPEND="
 	dev-qt/qtwidgets:5
 	dev-qt/qtgui:5
