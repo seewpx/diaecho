@@ -20,6 +20,7 @@ RESTRICT="bindist mirror"
 
 BDEPEND=""
 RDEPEND="
+	<sys-devel/gcc-9[cxx]
 	>=x11-drivers/nvidia-drivers-${DRIVER_PV}[X,uvm]
 	debugger? (
 		dev-libs/openssl-compat:1.0.0
@@ -49,7 +50,7 @@ pkg_setup() {
 src_prepare() {
 	local cuda_supported_gcc
 
-	cuda_supported_gcc="4.7 4.8 4.9 5.3 5.4 6.3 6.4 7.2 7.3 8.2 8.3 9.2"
+	cuda_supported_gcc="4.7 4.8 4.9 5.3 5.4 6.3 6.4 7.2 7.3 8.2 8.3"
 
 	sed \
 		-e "s:CUDA_SUPPORTED_GCC:${cuda_supported_gcc}:g" \
