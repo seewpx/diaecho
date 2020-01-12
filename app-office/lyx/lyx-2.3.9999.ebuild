@@ -99,7 +99,8 @@ src_configure() {
 	tc-export CXX
 	#bug 221921
 	export VARTEXFONTS="${T}"/fonts
-
+	./autogen.sh
+	
 	econf \
 		$(use_with aspell) \
 		$(use_enable debug) \
