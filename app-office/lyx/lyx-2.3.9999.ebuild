@@ -14,7 +14,7 @@ HOMEPAGE="https://www.lyx.org/"
 #	ftp://ftp.lyx.org/pub/lyx/devel/lyx-2.3/${MY_P}/${MY_P}.tar.xz"
 
 EGIT_REPO_URI="git://git.lyx.org/lyx"
-EGIT_CLONE_TYPE="single"
+EGIT_CLONE_TYPE="shallow"
 
 LICENSE="GPL-2"
 SLOT="0"
