@@ -19,7 +19,7 @@ DEPEND="virtual/udev"
 src_prepare() {
 	eapply_user
 	sed -i /-g/d Makefile || die
-	sed -i s,VERSION,\"0.4\", brightnessctl.c || die
+	sed -i s,VERSION,\"0.5.1\", brightnessctl.c || die
 }
 
 src_compile() {
