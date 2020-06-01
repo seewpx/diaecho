@@ -10,7 +10,7 @@ DESCRIPTION="Update Portage tree, all installed packages, and kernel"
 
 HOMEPAGE="https://github.com/seewpx/genup"
 EGIT_REPO_URI="https://github.com/seewpx/genup"
-
+EGIT_CLONE_TYPE=shallow
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~ppc"
