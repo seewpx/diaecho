@@ -3,6 +3,12 @@ A gentoo overlay with misc packages. This overlay is most of my own convenience.
 
 
 ## Usage
+### eselect-repository
+Add and install using *eselect-repository*.
+
+```bash
+eselect repository add diaecho git https://github.com/seewpx/diaecho.git
+```
 
 ### layman
 
