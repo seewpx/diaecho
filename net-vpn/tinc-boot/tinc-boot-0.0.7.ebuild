@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=""
+DEPEND="
+    =net-vpn/tinc-1.0*"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}" 
 src_unpack() {
