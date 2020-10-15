@@ -345,7 +345,7 @@ multilib_src_configure() {
 		-DWITH_GDCM=OFF
 		-DWITH_PVAPI=OFF
 		-DWITH_GIGEAPI=OFF
-		-DWITH_ARAVIS=OFF
+		-DWITH_ARAVIS=ON
 		-DWITH_QT=$(multilib_native_usex qt5 5 OFF)
 		-DWITH_WIN32UI=OFF		# Windows only
 	#	-DWITH_QUICKTIME=OFF
