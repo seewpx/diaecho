@@ -3,9 +3,8 @@
 
 EAPI=6
 
-inherit git-r3
+
 SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/aravis/0.6/aravis-${PV}.tar.xz"
-EGIT_CHECKOUT_DIR="${WORKDIR}/${P}"
 DESCRIPTION="Library for video acquisition using Genicam cameras"
 HOMEPAGE="https://github.com/AravisProject/aravis"
 LICENSE="LGPL-2+"
