@@ -43,10 +43,10 @@ src_install() {
 	#dodoc ${S}/doc/readme.md
 
 	#newinitd "${FILESDIR}/v2ray.initd" v2ray
-	sed  -i 's/usr\/local\/bin/usr\/bin/g' systemd/v2ray.service
-	sed  -i 's/usr\/local\/etc/etc/g' systemd/v2ray.service
-        sed  -i 's/usr\/local\/bin/usr\/bin/g' systemd/v2ray@.service
-        sed  -i 's/usr\/local\/etc/etc/g' systemd/v2ray@.service
+	sed  -i 's/usr\/local\/bin/usr\/bin/g' systemd/system/v2ray.service
+	sed  -i 's/usr\/local\/etc/etc/g' systemd/system/v2ray.service
+        sed  -i 's/usr\/local\/bin/usr\/bin/g' systemd/system/v2ray@.service
+        sed  -i 's/usr\/local\/etc/etc/g' systemd/system/v2ray@.service
 	systemd_dounit systemd/system/v2ray.service
 	systemd_dounit systemd/system/v2ray@.service
 	popd
