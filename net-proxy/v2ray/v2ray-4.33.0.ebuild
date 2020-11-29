@@ -9,7 +9,7 @@ inherit systemd
 DESCRIPTION="A platfoqrm for building proxies to bypass network restrictions."
 HOMEPAGE="https://www.v2ray.com/"
 SRC_URI="
-	https://github.com/v2ray/v2ray-core/releases/download/$MY_PV/v2ray-linux-64.zip -> v2ray-${MY_PV}.zip
+	https://github.com/v2fly/v2ray-core/releases/download/$MY_PV/v2ray-linux-64.zip -> v2ray-${MY_PV}.zip
 "
 
 LICENSE="MIT"
