@@ -33,17 +33,22 @@ src_install() {
 
 	dobin v2ray v2ctl
 
+	#insinto /etc/v2ray
+	#doins *.json
+	insinto /usr/share/${PN}
+	doins geoip.dat geosite.dat
+
 	insinto /etc/v2ray
 	doins *.json
-
-	dobin geoip.dat geosite.dat
-
 	#dodoc ${S}/doc/readme.md
 
 	#newinitd "${FILESDIR}/v2ray.initd" v2ray
-	sed  -i 's/bin\/v2ray\/v2ray/bin\/v2ray/g' systemd/v2ray.service
-	systemd_dounit systemd/v2ray.service
-
+	sed  -i 's/usr\/local\/bin/usr\/bin/g' systemd/v2ray.service
+	sed  -i 's/usr\/local\/etc/etc/g' systemd/v2ray.service
+        sed  -i 's/usr\/local\/bin/usr\/bin/g' systemd/v2ray@.service
+        sed  -i 's/usr\/local\/etc/etc/g' systemd/v2ray@.service
+	systemd_dounit systemd/system/v2ray.service
+	systemd_dounit systemd/system/v2ray@.service
 	popd
 }
 
