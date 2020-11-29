@@ -38,7 +38,7 @@ src_install() {
 
 	dobin geoip.dat geosite.dat
 
-	dodoc ${S}/doc/readme.md
+	#dodoc ${S}/doc/readme.md
 
 	#newinitd "${FILESDIR}/v2ray.initd" v2ray
 	sed  -i 's/bin\/v2ray\/v2ray/bin\/v2ray/g' systemd/v2ray.service
