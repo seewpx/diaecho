@@ -9,7 +9,7 @@ inherit systemd
 DESCRIPTION="SmartDNS accepts DNS query requests from local clients, and returns the fastest access results to clients."
 HOMEPAGE="https://github.com/pymumu/smartdns"
 SRC_URI="
-	https://github.com/pymumu/smartdns/releases/download/Release33/smartdns.1.2020.09.08-2235.x86_64-linux-all.tar.gz -> smartdns-${MY_PV}.zip
+	https://github.com/pymumu/smartdns/releases/download/Release33/smartdns.1.2020.09.08-2235.x86_64-linux-all.tar.gz -> smartdns-${MY_PV}.tar.gz
 "
 
 LICENSE="GPL-3"
@@ -19,17 +19,17 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-S="${WORKDIR}" 
-src_unpack() {
-	if [ "${A}" != "" ]; then
-		unpack ${A}
-	fi
-	#mv * ${PN}-${PV}
-}
+S="${WORKDIR}/smartdns" 
+#src_unpack() {
+#	if [ "${A}" != "" ]; then
+#		unpack ${A}
+#	fi
+#	#mv * ${PN}-${PV}
+#}
 
 src_install() {
-	gobindir=`dirname ${S}/*/`
-	pushd $gobindir
+	#gobindir=`dirname ${S}/*/`
+	#pushd $gobindir
 
 	dosbin usr/sbin/smartdns
 
@@ -40,6 +40,6 @@ src_install() {
 	doins etc/smartdns/smartdns.conf
 
 	systemd_dounit systemd/smartdns.service
-	popd
+	#popd
 }
 
