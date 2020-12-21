@@ -62,8 +62,8 @@ src_install() {
         newinitd "${FILESDIR}"/laptop_mode.init-1.4 laptop_mode
 
         # See src_prepare()
-        insinto /etc/pm/config.d
-        doins "${T}"/${PN}
+        #insinto /etc/pm/config.d
+        #doins "${T}"/${PN}
 }
 
 pkg_postinst() {
