@@ -26,7 +26,7 @@ RDEPEND="sys-apps/iproute2
         acpi? ( sys-power/acpid )
         apm? ( sys-apps/apmd )
         bluetooth? ( net-wireless/bluez:= )
-        dev-python/PyQt5"
+        dev-python/PyQt5[widgets,gui]"
 
 #PATCHES=(
 #        "${FILESDIR}/0001-Fix-case-sensitive-name-for-lmt.py.patch"
